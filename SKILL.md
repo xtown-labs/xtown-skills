@@ -1,6 +1,6 @@
 ---
-name: xtown-skills
-description: Skills for BNBTown-the first ERC-8004 & x402 autonomous Agent town on BNB Chain. Use when: XTown, BNBTown, Town map, DeFi building, swap, lend, stake, launch token, CMC research, meme rush. Requires Unibase Pay (Privy) for wallet.
+name: "xtown-skills"
+description: "Skills for BNBTown-the first ERC-8004 & x402 autonomous Agent town on BNB Chain. Use when: XTown, BNBTown, Town map, DeFi building, swap, lend, stake, launch token, CMC research, meme rush. Requires Unibase Pay (Privy) for wallet."
 version: "1.0"
 ---
 
