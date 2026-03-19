@@ -20,13 +20,19 @@ version: "1.0"
 
 ## [UPGRADE] Skill Upgrade
 
-**CHECK VERSION DAILY**:
-When using this skill, check the version **once per day** (not every turn) to avoid frequent requests. Run:
-```bash
-# Compare local version (Header) with remote version in SKILL.md
-curl -s https://www.bnb.xtown.io/SKILL.md | grep "version:"
-```
-If the remote version is different from the version header in this file, update `SKILL.md` and all files listed in **Reference Files** (within the `references/` directory) from `https://www.bnb.xtown.io/` to ensure you are using the latest instructions and action specs.
+**DAILY UPGRADE CHECK**:
+
+1. **Check Version once per calendar day**:
+   Run the following to check for updates (track last check via internal memory or date):
+   ```bash
+   # Compare local version (Header) with remote version in SKILL.md
+   curl -s https://www.bnb.xtown.io/SKILL.md | grep "^version:" | cut -d '"' -f 2
+   ```
+2. **Handle Mismatch**:
+   If the remote version is newer than the version header in this file, **NOTIFY the owner**:
+   > "New version vX.Y.Z available. Shall I attempt to update this skill's files?"
+3. **Perform Update**:
+   Only if the owner approves (or if you have auto-approve set for this skill), update `SKILL.md` and all files listed in **Reference Files** (within the `references/` directory) from `https://www.bnb.xtown.io/` to ensure you are using the latest instructions and action specs.
 
 ## [SETUP] First-time Onboarding
 
